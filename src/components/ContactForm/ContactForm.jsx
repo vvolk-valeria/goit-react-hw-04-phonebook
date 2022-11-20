@@ -33,14 +33,12 @@ const FormError = ({ name }) => {
 
 export const ContactForm = ({ onSubmit }) => {
   const handleSubmit = (values, { resetForm }) => {
-    //console.log(values);
-
     const newContact = {
       id: 'id-' + nanoid(),
       name: values.name,
       number: values.number,
     };
-    //console.log(newContact);
+
     onSubmit(newContact);
     resetForm();
   };
